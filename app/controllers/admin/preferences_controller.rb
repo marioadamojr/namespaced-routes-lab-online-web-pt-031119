@@ -38,7 +38,7 @@ class Admin::PreferencesController < ApplicationController
   end
 
   def destroy
-    @preference = Preference.find(params[:id])
+    @preference = Preference.find_by(params[:id])
     @preference.destroy
     flash[:notice] = "Preference deleted."
     redirect_to admin_preferences_path
