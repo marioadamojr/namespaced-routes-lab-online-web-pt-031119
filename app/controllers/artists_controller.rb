@@ -8,7 +8,6 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    prefs = Preference.find_by(params[:allow_create_artists])
     if preference.allow_create_artists
       @artist = Artist.new
     else
