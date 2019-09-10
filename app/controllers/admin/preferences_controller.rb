@@ -22,7 +22,7 @@ class Admin::PreferencesController < ApplicationController
   end
 
   def edit
-    @preference = Preference.find(params[:id])
+    @preference = Preference.find_by(params[:id])
   end
 
   def update
