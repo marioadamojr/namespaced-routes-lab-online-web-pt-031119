@@ -26,7 +26,7 @@ class Admin::PreferencesController < ApplicationController
   end
 
   def update
-    @preference = Preference.find(params[:id])
+    @preference = Preference.find_by(params[:id])
 
     @preference.update(preference_params)
 
