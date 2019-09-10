@@ -26,6 +26,7 @@ class SongsController < ApplicationController
 
   def new
     prefs = Preference.find_by(params[:allow_create_songs])
+    binding.pry
     if prefs.allow_create_songs
       @song = Song.new
     else
